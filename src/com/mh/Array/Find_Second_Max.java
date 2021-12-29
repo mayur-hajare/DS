@@ -27,9 +27,9 @@ class arr {
                     a[i] = a[j];
                     a[j] = temp;
                 }
-                if (i == 1)
-                    break;
             }
+            if (i == 1)
+                break;
         }
         return a[1];
     }
