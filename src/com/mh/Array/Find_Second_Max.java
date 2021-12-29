@@ -17,19 +17,21 @@ class arr {
     }
 
 
-    // Finding Second Max Number from array using Linear sort
+    // Finding Second Max Number from array using sorting
     public int Second_Max() {
         int temp;
         for (int i = 0; i < a.length; i++) {
             for (int j = i + 1; j < a.length; j++) {
-                if (a[i] > a[j]) {
+                if (a[i] < a[j]) {
                     temp = a[i];
                     a[i] = a[j];
                     a[j] = temp;
                 }
+                if (i == 1)
+                    break;
             }
         }
-        return a[3];
+        return a[1];
     }
 
     // Displaying the Array
