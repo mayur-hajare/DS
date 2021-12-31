@@ -15,6 +15,7 @@ public class Contiguous_Subarray {
                 break;
                 //sum = sum + a[i];
             }
+
         }
         for (int i = 0; i < a.length - 1; i++) {
             if (a[i] > a[i + 1]) {
