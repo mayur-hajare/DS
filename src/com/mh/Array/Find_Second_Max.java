@@ -19,7 +19,7 @@ class arr {
 
     // Finding Second Max Number from array using sorting
     public int Second_Max() {
-        int temp;
+      /*  int temp;
         for (int i = 0; i < a.length; i++) {
             for (int j = i + 1; j < a.length; j++) {
                 if (a[i] < a[j]) {
@@ -31,7 +31,19 @@ class arr {
             if (i == 1)
                 break;
         }
-        return a[1];
+        return a[1];*/
+        int max = Integer.MIN_VALUE, s_max = 0;
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] > max) {
+                s_max = max;
+                max = a[i];
+            } else if (a[i] > s_max && a[i] != max) {
+                s_max = a[i];
+            }
+        }
+
+        return s_max;
     }
 
     // Displaying the Array
