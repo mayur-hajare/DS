@@ -6,22 +6,30 @@ import java.util.Set;
 
 public class Sum_of_subset {
 
-    public static void Input() {
+    public static void Input(Set set) {
         Scanner sc = new Scanner(System.in);
-        Set<Integer> s = new HashSet<>();
-        int k = 0;
-
+        Set<Integer> s = set;
 
         System.out.print("Enter Size Of Set :");
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
             System.out.print("Enter Value " + i + " : ");
             int v = sc.nextInt();
-            s.add(v);
+            if (s.contains(v)) {
+                System.out.println("Element already in Set..");
+                break;
+            } else {
+                s.add(v);
+            }
         }
+    }
 
+    public static void Find(Set set) {
+        Scanner sc = new Scanner(System.in);
+        Set<Integer> s = set;
+        Integer[] a = s.toArray(new Integer[s.size()]);
         System.out.println("Enter The value of K  :");
-        k = sc.nextInt();
+        int k = sc.nextInt();
         /*s.add(5);
         s.add(2);
         s.add(4);
@@ -30,7 +38,6 @@ public class Sum_of_subset {
 
 
         //int[] arr = s.toArray(new int[]s.size());
-        Integer[] a = s.toArray(new Integer[s.size()]);
 
 
         for (int i = 0; i < s.size(); i++) {
@@ -52,7 +59,32 @@ public class Sum_of_subset {
         }
     }
 
+
+    public static void Display(Set set) {
+        Set<Integer> s = set;
+        Integer[] a = s.toArray(new Integer[s.size()]);
+        System.out.println("Set Elements Are :");
+        System.out.print("[ ");
+        for (int i = 0; i < s.size(); i++) {
+            if (i != s.size() - 1) {
+                System.out.print(a[i] + ", ");
+            } else {
+                System.out.print(a[i]);
+            }
+        }
+        System.out.print("]");
+
+
+    }
+
     public static void main(String[] args) {
-        Input();
+
+        Set<Integer> set = new HashSet<>();
+
+        Input(set);
+        Find(set);
+        Display(set);
+
+
     }
 }
