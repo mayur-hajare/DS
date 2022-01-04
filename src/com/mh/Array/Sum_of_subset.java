@@ -17,7 +17,8 @@ public class Sum_of_subset {
             int v = sc.nextInt();
             if (s.contains(v)) {
                 System.out.println("Element already in Set..");
-                break;
+                System.exit(0);
+                //break;
             } else {
                 s.add(v);
             }
