@@ -9,6 +9,7 @@ class TSP {
     TSP(int[][] a) {
         int[][] arr = a;
 
+
         //System.out.println(arr[1][3]);
        /* for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
