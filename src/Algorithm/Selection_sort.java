@@ -31,7 +31,6 @@ class S_sort {
                 temp = a[min];
                 a[min] = a[i];
                 a[i] = temp;
-
             }
         }
         for (int i = 0; i < a.length; i++) {
