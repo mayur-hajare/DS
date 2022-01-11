@@ -20,16 +20,18 @@ class S_sort {
     int[] a;
 
     void Find() {
-        int min = a[1];
+        int min, temp = 0;
         for (int i = 0; i < a.length; i++) {
             for (int j = i + 1; j < a.length; j++) {
 
-
-                if (a[j] < a[i]) {
-                    int temp = a[i];
-                    a[i] = a[j];
-                    a[j] = temp;
+                min = i;
+                if (a[j] < a[min]) {
+                    min = j;
                 }
+                temp = a[min];
+                a[min] = a[i];
+                a[i] = temp;
+
             }
         }
         for (int i = 0; i < a.length; i++) {
@@ -70,6 +72,7 @@ public class Selection_sort {
         sort.Input(a);
         System.out.println("Given Array Is : ");
         sort.Display();
+        System.out.println();
         System.out.println("Sorted Array IS : ");
         sort.Find();
 
