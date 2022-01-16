@@ -14,11 +14,10 @@ public class Find_same_number {
 
         for (int n : a) {
             if (s.add(n) == false) {
-                System.out.println(n + " Same");
-            } else {
                 System.out.println(n);
-
             }
+            // System.out.println(n);
+
         }
     }
 }
