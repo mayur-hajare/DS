@@ -13,7 +13,6 @@ class kth {
         System.out.println("Enter Array Elements : ");
         for (int i = 0; i < a.length; i++)
             a[i] = sc.nextInt();
-
     }
 
     public void Display() {
