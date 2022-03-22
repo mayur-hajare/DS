@@ -6,14 +6,13 @@ import java.util.Scanner;
 class sol {
     int[] arr;
     int[] arr1;
-    int[] r ;
+    int[] r;
 
     public void add(int[] a, int[] b) {
 
         arr = a;
         arr1 = b;
         int size = arr.length + arr1.length;
-
 
 
         int i = 0;
