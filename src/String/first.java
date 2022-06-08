@@ -23,6 +23,7 @@ class Sol {
         System.out.println(str);
     }
 
+
 }
 
 public class first {
